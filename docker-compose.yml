@@ -4,11 +4,11 @@ services:
     image: postgres:latest
     restart: always
     ports:
-      - '9999:9999'
+      - '185.119.57.164:9999'
     volumes:
       - ./data:/var/lib/mysql
     environment:
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
       - MYSQL_DATABASE=db
       - MYSQL_USER=app
-      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+      - MYSQL_PASSWORD=PASSWORD9999
