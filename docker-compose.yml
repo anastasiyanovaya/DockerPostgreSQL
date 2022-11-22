@@ -1,15 +1,16 @@
-version: '3.7'
+version: '3.1'
+
 services:
+
   db:
-    image: postgres:latest
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: app
+
+  adminer:
+    image: adminer
     restart: always
     ports:
-      - '185.119.57.164:9999'
-    volumes:
-      - ./data:/var/lib/mysql
-    environment:
-      - PGUSER=app
-      - PGHOST=postgres
-      - PGDATABASE=postgres
-      - PGPASSWORD=PASSWORD9999
-      - PGPORT=9999
+      - 9999:9999
