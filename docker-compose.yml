@@ -9,4 +9,4 @@ services:
     environment:
      - POSTGRES_PASSWORD=passwordtest
      - POSTGRES_DB=dbtest
-     - MPOSTGRES_USER=test
+     - POSTGRES_USER=test
